@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import "./App.css"
 // import ol from 'ol';
 import Map from 'ol/Map';
 import View from 'ol/View';
@@ -85,8 +86,8 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <div id="map" style={{ width: '100%', height: '400px' }}></div>
+    <div className='container'>
+      <div id="map" style={{ width: '100%', height: '100%' }}></div>
     </div>
   );
 }
