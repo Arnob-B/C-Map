@@ -19,7 +19,7 @@ const MainForm=()=>{
       console.log(body);
       localStorage.setItem('token', body.jwtkey);
       alert("you are logged in...")
-      nav('/completed');
+      nav('/signup');
     }
     else{
       alert("your have given faulty username and password");

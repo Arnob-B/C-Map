@@ -11,23 +11,14 @@ import React from 'react';
 // import { bbox as bboxStrategy } from 'ol/loadingstrategy';
 // import { defaults as defaultControls, ScaleLine } from 'ol/control';
 // import map1 from './Components/ver1.geojson'
-import { Routes, Route } from 'react-router-dom';
-import StreetLight from './Components/StreetLight';
-import CrimeRate from './Components/CrimeRate';
-import Navbar from './Components/Navbar';
+// import { Routes, Route } from 'react-router-dom';
+// import Authpage from './Components/AuthPage/Authcomponent.jsx'
+import Map from './Components/Map.js'
+function App(){
+  return(
+    <Map/>
+  )
 
-function App() {
-  
-  return (
-    <>
-      <Navbar />
-      <Routes>
-        <Route path='/' element={ <StreetLight /> }></Route>
-        <Route path='/CrimeRate' element= { <CrimeRate /> }></Route>
-      </Routes>
-    </>
-    
-  );
 }
 
 export default App;

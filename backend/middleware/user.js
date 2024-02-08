@@ -3,6 +3,7 @@ const jwt = require('jsonwebtoken')
 const jwtsecret = process.env.JWTSECRET
 
 const create_user=(req, res, next)=> {
+  console.log("came here");
     // Implement user auth logic
     // You need to check the headers and validate the user from the user DB. Check readme for the exact headers to be expected
     User.findOne({
