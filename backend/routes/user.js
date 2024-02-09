@@ -13,10 +13,15 @@ router.post('/signup',allmiddleware.create_user, (req, res) => {
     });
 });
 router.post('/signin',allmiddleware.check_user,(req,res)=>{
-    console.log({username: req.headers.username});
   const key = jwt.sign({username:req.headers.username},jwtsecret);
   res.status(200).json({jwtkey:key});
 })
 
+router.get('/getusername',(req,res)=>{
+    res.status(200).json({
+        "username":req.myobj.username,
+    });
+
+})
 
 module.exports = router;

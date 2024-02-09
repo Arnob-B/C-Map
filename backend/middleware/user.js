@@ -3,7 +3,6 @@ const jwt = require('jsonwebtoken')
 const jwtsecret = process.env.JWTSECRET
 
 const create_user=(req, res, next)=> {
-  console.log("came here");
     // Implement user auth logic
     // You need to check the headers and validate the user from the user DB. Check readme for the exact headers to be expected
     User.findOne({
@@ -39,17 +38,25 @@ const check_user=(req,res,next)=>{
     }
   })
 }
-const check_jwt=(req,res,next) =>{
-  key = req.headers.authorization;
-  try{jwt.verify(key,jwtsecret);next()}
-  catch(err){
-    res.status(400).json({msg:"u are not authorized"})
-  }
+// const check_jwt=(req,res,next) =>{
+//   key = req.headers.authorization;
+//   try{jwt.verify(key,jwtsecret);req.myobj=new Object({given_username=jwt.decode()});next();}
+//   catch(err){
+//     res.status(400).json({msg:"u are not authorized"})
+//   }
+// }
+const findUsername=(req,res,next)=>{
+  User.findOne({
+    username : req.myobj.given_username,
+  }).then(result=>{
+    if(result){
+      myobj.username = result.fullname
+    }
+  })
 }
 
 
 module.exports ={
   create_user,
   check_user,
-  check_jwt
 }

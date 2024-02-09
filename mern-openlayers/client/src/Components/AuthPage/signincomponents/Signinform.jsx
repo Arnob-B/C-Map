@@ -17,9 +17,9 @@ const MainForm=()=>{
     if(result.ok){
       const body = await result.json();
       console.log(body);
-      localStorage.setItem('token', body.jwtkey);
-      alert("you are logged in...")
-      nav('/signup');
+      localStorage.setItem('Token', body.jwtkey);
+      // alert("you are logged in...")
+      nav('/StreetLight');
     }
     else{
       alert("your have given faulty username and password");

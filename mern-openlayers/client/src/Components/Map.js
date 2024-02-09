@@ -13,6 +13,7 @@ function Map() {
         <Route path='/CrimeRate' element= { <CrimeRate /> }></Route>
         <Route path='/Signin' element= { <Signin/> }></Route>
         <Route path='/Signup' element= { <Signup/> }></Route>
+        <Route path='/' element= { <Signup/> }></Route>
       </Routes>
     </>
     

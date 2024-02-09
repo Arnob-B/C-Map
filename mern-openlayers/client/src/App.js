@@ -12,13 +12,13 @@ import React from 'react';
 // import { defaults as defaultControls, ScaleLine } from 'ol/control';
 // import map1 from './Components/ver1.geojson'
 // import { Routes, Route } from 'react-router-dom';
-// import Authpage from './Components/AuthPage/Authcomponent.jsx'
+import Auth from './Components/AuthPage/Auth.js'
 import Map from './Components/Map.js'
 function App(){
   return(
     <Map/>
+    //  <Auth/>
   )
-
 }
 
 export default App;
