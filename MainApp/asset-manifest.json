@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c1caca76.css",
+    "main.js": "/static/js/main.8e2ce504.js",
+    "static/js/592.599f76a2.chunk.js": "/static/js/592.599f76a2.chunk.js",
+    "static/media/ver1.geojson": "/static/media/ver1.5169736e9cbf38ec7117.geojson",
+    "static/media/map3.geojson": "/static/media/map3.6213e02b98e71ac5aaae.geojson",
+    "static/media/map2.geojson": "/static/media/map2.78d833d318b998c21b27.geojson",
+    "static/media/map7.geojson": "/static/media/map7.8488e81ed6b4ac8bd257.geojson",
+    "static/media/map10.geojson": "/static/media/map10.bf700e3197a45bafe3bd.geojson",
+    "static/media/map6.geojson": "/static/media/map6.9708c7aaeb67894d9658.geojson",
+    "static/media/map1.geojson": "/static/media/map1.cfbc146afee30a3f3252.geojson",
+    "index.html": "/index.html",
+    "main.c1caca76.css.map": "/static/css/main.c1caca76.css.map",
+    "main.8e2ce504.js.map": "/static/js/main.8e2ce504.js.map",
+    "592.599f76a2.chunk.js.map": "/static/js/592.599f76a2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c1caca76.css",
+    "static/js/main.8e2ce504.js"
+  ]
+}
