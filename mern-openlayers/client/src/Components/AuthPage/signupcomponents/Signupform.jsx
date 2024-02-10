@@ -1,14 +1,6 @@
 import { useNavigate } from "react-router-dom"
 import s from "./Signupform.module.css"
 
-const TestItem=()=>{
-  return(
-    <div className="test">
-      hello
-    </div>
-  )
-}
-
 
 const MainForm=()=>{
   const signup=async ()=>{
@@ -65,12 +57,12 @@ const DisplayMessage=({sw})=>{
     </div>
   )
 }
-const Mainsignupframe =({sw})=>{
+const Mainsignupframe =()=>{
 return(
   <div className={s.mainframe}>
-    <DisplayMessage sw={sw}>
+    <DisplayMessage >
       </DisplayMessage>
-    <MainForm/>
+    <MainForm />
   </div>
 )
 }

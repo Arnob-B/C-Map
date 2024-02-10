@@ -1,10 +1,10 @@
 import s from './Signup.module.css'
 import Mainsignupframe from "./Signupform"
 
-function Signup({sw}){
+function Signup(){
   return(
     <div className={s.container}>
-      <Mainsignupframe sw={sw}/>
+      <Mainsignupframe />
     </div>
   )
 }

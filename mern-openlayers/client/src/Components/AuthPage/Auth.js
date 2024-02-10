@@ -1,22 +1,19 @@
-import { Route, Routes } from "react-router-dom";
+import { Routes ,Route} from "react-router-dom";
 import Signin from "./signincomponents/Signin";
 import Signup from "./signupcomponents/Signup";
-import StreetLight from "../StreetLight";
-import CrimeRate from "../CrimeRate";
+import Map from "../Map"
 
-function Auth(){
-  return
-  (
+const Auth=({setstate})=>{
+  return(
+    <div>
     <Routes>
-      <Route path="/" element={<Signin />}>
-        <Route path='/StreetLight' element={<StreetLight />}></Route>
-        <Route path='/CrimeRate' element={<CrimeRate />}></Route>
-        <Route path='/Signin' element={<Signin />}></Route>
-        <Route path='/Signup' element={<Signup />}></Route>
-      </Route>
-      <Route path="/su" element={<Signup />} />
+      <Route path='/' element={<Signup />}/>
+      <Route path='Signup' element={<Signup/>}/>
+      <Route path='Signin' element={<Signin setstate={setstate}/>}/>
+      <Route path='*' element={<Signin setstate={setstate}/>}/>
     </Routes>
-  )
+    </div>
+  );
 }
 
 

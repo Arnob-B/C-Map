@@ -1,10 +1,10 @@
 import s from './Signin.module.css'
 import Mainsigninframe from "./Signinform.jsx"
 
-function Signin({sw}){
+function Signin({setstate}){
   return(
     <div className={s.container}>
-      <Mainsigninframe sw={sw}/>
+      <Mainsigninframe setstate={setstate}/>
     </div>
   )
 }
