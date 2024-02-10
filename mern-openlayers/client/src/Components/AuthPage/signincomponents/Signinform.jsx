@@ -5,7 +5,7 @@ import {useNavigate} from 'react-router-dom'
 const MainForm=({setstate})=>{
   const nav = useNavigate();
   const signin=async ()=>{
-    const result = await fetch("http://localhost:3000/user/signin",{ // make sure that the backend server is setup in the 3000 port
+    const result = await fetch("https://safe-map-india.onrender.com/user/signin",{ // make sure that the backend server is setup in the 3000 port
       method:"POST",
         headers: {
           'Accept': 'application/json',
@@ -20,6 +20,7 @@ const MainForm=({setstate})=>{
       localStorage.setItem('Token', body.jwtkey);
       // alert("you are logged in...")
       setstate(1);
+      nav('/StreetLight');
     }
     else{
       alert("your have given faulty username and password");
