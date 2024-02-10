@@ -2,7 +2,7 @@ import s from './Signinform.module.css'
 import {useNavigate} from 'react-router-dom'
 
 
-const MainForm=()=>{
+const MainForm=({setstate})=>{
   const nav = useNavigate();
   const signin=async ()=>{
     const result = await fetch("http://localhost:3000/user/signin",{ // make sure that the backend server is setup in the 3000 port
@@ -19,7 +19,7 @@ const MainForm=()=>{
       console.log(body);
       localStorage.setItem('Token', body.jwtkey);
       // alert("you are logged in...")
-      nav('/StreetLight');
+      setstate(1);
     }
     else{
       alert("your have given faulty username and password");
@@ -60,11 +60,11 @@ const DisplayMessage=({sw})=>{
     </div>
   )
 }
-const Mainsigninframe =({sw})=>{
+const Mainsigninframe =({setstate})=>{
 return(
   <div className={s.mainframe}>
-    <MainForm/>
-    <DisplayMessage sw={sw}>
+    <MainForm setstate={setstate}/>
+    <DisplayMessage >
       </DisplayMessage>
   </div>
 )

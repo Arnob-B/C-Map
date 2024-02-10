@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 // // import ol from 'ol';
 // import Map from 'ol/Map';
 // import View from 'ol/View';
@@ -15,10 +15,17 @@ import React from 'react';
 import Auth from './Components/AuthPage/Auth.js'
 import Map from './Components/Map.js'
 function App(){
-  return(
-    <Map/>
-    //  <Auth/>
-  )
+  const [state,setstate] = useState(0);//0 corresponds to the auth page ,1 corresponds to main mapping page
+  if(state==0) {//now inside the authentication page
+    return (
+      <Auth setstate={setstate}/>
+    )
+  }
+  else{//now inside the mapping page
+    return(
+      <Map/>
+    )
+  }
 }
 
 export default App;
