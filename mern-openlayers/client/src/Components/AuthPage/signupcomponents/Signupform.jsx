@@ -3,21 +3,27 @@ import s from "./Signupform.module.css"
 
 
 const MainForm=()=>{
+      const nav = useNavigate();
   const signup=async ()=>{
-    const result = await fetch("http://localhost:3000/user/signup",{
+    const fullname = document.getElementById('user_fname').value;
+    const username = document.getElementById('user_name').value;
+    const password = document.getElementById('user_pass').value;
+    if(fullname===""||username===""||password==="") {alert("Plse enter the form correctly..");return;}
+    const result = await fetch("https://safe-map-india.onrender.com/user/signup",{
       method:"POST",
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
-          'fullname': document.getElementById('user_fname').value,
-          'username': document.getElementById('user_name').value,
-          'password': document.getElementById('user_pass').value,
+          'fullname': fullname,
+          'username': username,
+          'password': password,
         },
     });
     if(result.ok){
       console.log(result)
       const body = await result.json();
-      alert("Welcome to our application plse sign up now...")
+      // alert("Welcome to our application plse sign in now...")
+      nav('/signin');
     }
     else{
       alert("your data are invalidate or the username already exists");
